@@ -1,0 +1,51 @@
+#include "pch.h"
+#include "CppUnitTest.h"
+#include "C:\Users\dell\source\repos\Project8\Project8\test.h"
+using namespace Microsoft::VisualStudio::CppUnitTestFramework;
+namespace UnitTest1
+{
+	TEST_CLASS(UnitTest1)
+	{
+	public:
+		TEST_METHOD(TestMethod1)
+		{
+			int questionnumber = 20;
+			int maxnum = 100;
+			int isdecimal = 0;
+			int isbracket = 0;
+			char operateCharacter[4] = { '+','-','*','/' };
+			int operatenum = 4;
+			Assert::AreEqual(0, arithmetic(questionnumber, maxnum, isdecimal, isbracket, operateCharacter, operatenum));
+		}
+		TEST_METHOD(TestMethod2)
+		{
+			int questionnumber = 20;
+			int maxnum = 100;
+			int isdecimal = 1;
+			int isbracket = 0;
+			char operateCharacter[4] = { '+','-','*' };
+			int operatenum = 3;
+			Assert::AreEqual(0, arithmetic(questionnumber, maxnum, isdecimal, isbracket, operateCharacter, operatenum));
+		}
+		TEST_METHOD(TestMethod3)
+		{
+			int questionnumber = 20;
+			int maxnum = 100;
+			int isdecimal = 0;
+			int isbracket = 1;
+			char operateCharacter[4] = { '*','/' };
+			int operatenum = 4;
+			Assert::AreEqual(0, arithmetic(questionnumber, maxnum, isdecimal, isbracket, operateCharacter, operatenum));
+		}
+		TEST_METHOD(TestMethod4)
+		{
+			int questionnumber = 20;
+			int maxnum = 100;
+			int isdecimal = 1;
+			int isbracket = 1;
+			char operateCharacter[4] = { '+','-','*','/' };
+			int operatenum = 4;
+			Assert::AreEqual(0, arithmetic(questionnumber, maxnum, isdecimal, isbracket, operateCharacter, operatenum));
+		}
+	};
+}
